@@ -6,7 +6,7 @@ module.exports = {
         sans: ['Poppins', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
       },
       backgroundImage: {
-        'custom-pattern': "url('./background.jpg')",
+        'custom-pattern': "url('/background.jpg')",
       },
       animation: {
         'logo-spin': 'logo-spin 20s linear infinite',

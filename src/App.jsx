@@ -6,9 +6,9 @@ import Contact from './routes/Contact';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/portfolio"> {/* Use the base path here */}
       <Routes>
-        <Route path="/portfolio" element={<Home />} />
+        <Route path="/" element={<Home />} /> {/* Make Home relative to "/portfolio" */}
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
