@@ -9,9 +9,9 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/portfolio" element={<Home />} />
-        <Route path="/portfolio/skills" element={<Skills />} />
-        <Route path="/portfolio/projects" element={<Projects />} />
-        <Route path="/portfolio/contact" element={<Contact />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
