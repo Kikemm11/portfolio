@@ -16,9 +16,9 @@ const Navbar = () => {
 
       {/* Right: Buttons */}
       <div className="flex space-x-4">
-        <NavbarButton content={"Skills"} link={"skills"} />
-        <NavbarButton content={"Projects"} link={"projects"} />
-        <NavbarButton content={"Contact"} link={"contact"} />
+        <NavbarButton content={"Skills"} link={"/portfolio/skills"} />
+        <NavbarButton content={"Projects"} link={"/portfolio/projects"} />
+        <NavbarButton content={"Contact"} link={"/portfolio/contact"} />
       </div>
     </nav>
   );
