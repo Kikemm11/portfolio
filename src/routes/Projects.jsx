@@ -13,7 +13,7 @@ import enlanadosOrders from '../assets/enlanados-orders.png';
 
 
 function Projects() {
-  // Sample projects data
+  // Projects data
   const projects = [
     {
       title: 'Sentinel Hawk',
@@ -26,7 +26,7 @@ function Projects() {
       description: "In this project, I contributed to the implementation of GnuHealth modules within Tryton ERP for several hospitals and care centers across my country, aiming to automate administrative and healthcare processes. I worked in various roles, including backend development, where I ensured seamless data flow between modules and the ERP system, and database management, optimizing structure and performance. Additionally, I collaborated in modeling workflows to tailor the system to the specific needs of healthcare providers, enhancing efficiency and improving data accuracy across the system.",
     },
     {
-      title: 'LimeSurveydataManager-Desktop',
+      title: 'LimeSurvey Data Manager',
       images: [limeApp, limeStatistics],
       description: "This project is a  simple python desktop-application which helps to manage the data provided by the responses of LimeSurveys along with the mobile application OfflineSurveysApp using Pandas module, in order to make them presentable and readable for common users trought out preformat .csv files and a more complete .html files wich includes dynamic tables of the responses, data analysis, charts and preview of images and locations if needed.",
     },
@@ -80,6 +80,29 @@ function Projects() {
         {currentProject.title}
       </h1>
 
+    
+      {/* Project Card */}
+      <div
+        className={`w-full max-w-7xl bg-gray-200 p-8 rounded-xl shadow-lg flex flex-col items-center min-h-[600px] mx-20 transition-transform duration-500 ${animationClass}`}
+      >
+      {/* Images */}
+      <div className="flex flex-wrap gap-24 mb-20 mt-10 justify-center items-center">
+        {currentProject.images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Project ${currentProjectIndex + 1} Image ${index + 1}`}
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-5/12 h-auto max-h-72 object-cover rounded-lg shadow-md transform hover:scale-110 transition-transform duration-300"
+          />
+        ))}
+      </div>
+
+        {/* Description */}
+        <p className="text-lg text-gray-700 px-10 text-justify">
+          {currentProject.description}
+        </p>
+      </div>
+
       {/* Arrows */}
       <button
         className="absolute left-10 top-1/2 transform -translate-y-1/2 bg-white/80 p-4 rounded-full shadow-md hover:bg-gray-300 transition-colors duration-300"
@@ -94,28 +117,6 @@ function Projects() {
       >
         <FaArrowRight className="text-3xl text-gray-700" />
       </button>
-
-      {/* Project Card */}
-      <div
-        className={`w-full max-w-7xl bg-gray-200 p-8 rounded-xl shadow-lg flex flex-col items-center min-h-[600px] mx-20 transition-transform duration-500 ${animationClass}`}
-      >
-      {/* Images */}
-      <div className="flex gap-24 mb-20 mt-10">
-        {currentProject.images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Project ${currentProjectIndex + 1} Image ${index + 1}`}
-            className="w-3/4 h-auto max-h-72 object-cover rounded-lg shadow-md transform hover:scale-110 transition-transform duration-300"
-          />
-        ))}
-      </div>
-
-        {/* Description */}
-        <p className="text-lg text-gray-700 px-10 text-justify">
-          {currentProject.description}
-        </p>
-      </div>
     </div>
   );
 }
