@@ -4,14 +4,17 @@ import bashLogo from '../assets/bash-logo.png';
 import pythonLogo from '../assets/python-logo.png';
 import cppLogo from '../assets/cpp-logo.png';
 import jsLogo from '../assets/js-logo.png';
+import dartLogo from '../assets/dart-logo.png';
 import sqlLogo from '../assets/sql-logo.png';
 import postgresLogo from '../assets/postgres-logo.png';
 import mysqlLogo from '../assets/mysql-logo.png';
+import sqliteLogo from '../assets/sqlite-logo.png';
 import flaskLogo from '../assets/flask-logo.png';
 import djangoLogo from '../assets/django-logo.png';
 import trytonLogo from '../assets/tryton-logo.png';
 import odooLogo from '../assets/odoo-logo.png';
 import reactLogo from '../assets/react-logo.png';
+import flutterLogo from '../assets/flutter-logo.png';
 import dockerLogo from '../assets/docker-logo.png';
 import gitLogo from '../assets/git-logo.png';
 
@@ -23,14 +26,17 @@ function Skills() {
     { name: 'Python', logo: pythonLogo },
     { name: 'C++', logo: cppLogo },
     { name: 'JavaScript', logo: jsLogo },
+    { name: 'Dart', logo: dartLogo },
     { name: 'SQL', logo: sqlLogo },
     { name: 'Postgres', logo: postgresLogo },
     { name: 'MySQL', logo: mysqlLogo },
+    { name: 'SQLite', logo: sqliteLogo },
     { name: 'Flask', logo: flaskLogo },
     { name: 'Django', logo: djangoLogo },
     { name: 'Tryton', logo: trytonLogo },
     { name: 'Odoo', logo: odooLogo },
     { name: 'React', logo: reactLogo },
+    { name: 'Flutter', logo: flutterLogo },
     { name: 'Docker', logo: dockerLogo },
     { name: 'Git', logo: gitLogo },
   ];

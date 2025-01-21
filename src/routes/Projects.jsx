@@ -9,6 +9,8 @@ import limeStatistics from '../assets/lime-statistics.jpg';
 import limeApp from '../assets/lime-app.jpg';
 import enlanadosStatistics from '../assets/enlanados-statistics.png';
 import enlanadosOrders from '../assets/enlanados-orders.png';
+import enlanadosMobileOrders from '../assets/enlanados-mobile-orders.png';
+import enlanadosMobileStatistics from '../assets/enlanados-mobile-statistics.png';
 
 
 
@@ -31,9 +33,14 @@ function Projects() {
       description: "This project is a  simple python desktop-application which helps to manage the data provided by the responses of LimeSurveys along with the mobile application OfflineSurveysApp using Pandas module, in order to make them presentable and readable for common users trought out preformat .csv files and a more complete .html files wich includes dynamic tables of the responses, data analysis, charts and preview of images and locations if needed.",
     },
     {
-      title: 'EnlanadosApp',
+      title: 'EnlanadosApp-Web',
       images: [enlanadosOrders, enlanadosStatistics],
-      description: "EnlanadosApp is a Flask-based application designed to streamline the management of orders, inventory, and organizational tasks for Enlanados, a small e-commerce platform specializing in crochet figures and related products. The app enhances operational efficiency by enabling users to create and track orders, manage wool inventory, and maintain an organized order history. In addition to these core functionalities, EnlanadosApp integrates data analysis tools to support informed decision-making, allowing the business to better understand trends, customer behavior, and inventory needs. The app also automates several previously manual processes, reducing time spent on repetitive tasks and improving overall efficiency. Built with the specific needs and requirements of the platform's owners in mind, the system was designed to provide a seamless, user-friendly experience that enhances both daily operations and long-term business growth.",
+      description: "EnlanadosApp-Web is a Flask-based application designed to streamline the management of orders, inventory, and organizational tasks for Enlanados, a small e-commerce platform specializing in crochet figures and related products. The app enhances operational efficiency by enabling users to create and track orders, manage wool inventory, and maintain an organized order history. In addition to these core functionalities, EnlanadosApp integrates data analysis tools to support informed decision-making, allowing the business to better understand trends, customer behavior, and inventory needs. The app also automates several previously manual processes, reducing time spent on repetitive tasks and improving overall efficiency. Built with the specific needs and requirements of the platform's owners in mind, the system was designed to provide a seamless, user-friendly experience that enhances both daily operations and long-term business growth.",
+    },
+    {
+      title: 'EnlanadosApp-Mobile',
+      images: [enlanadosMobileOrders, enlanadosMobileStatistics],
+      description: "EnlanadosApp-Mobile is an Android Mobile version of the preious project developed using Dart, Flutter and SQLite. It still manage bussiness logic related to keep track of orders, products, stock and statistics enhanced with new features that allows the user to have a more interactive UX/UI experience within the app and its usage. In addition to these changes this new version also brings new order and inventory structures wich let the user to add more than one product per order, personalized notifications and dynamic updates of the different parts of it.",
     },
   ];
 
