@@ -11,12 +11,36 @@ import enlanadosStatistics from '../assets/enlanados-statistics.png';
 import enlanadosOrders from '../assets/enlanados-orders.png';
 import enlanadosMobileOrders from '../assets/enlanados-mobile-orders.png';
 import enlanadosMobileStatistics from '../assets/enlanados-mobile-statistics.png';
+import piggy from '../assets/piggy.png';
+import piggyDetail from '../assets/piggy-detail.png';
+import pagoDirecto from '../assets/pago-directo.png';
+import pagoDirectoDetail from '../assets/pago-directo-detail.png';
 
 
 
 function Projects() {
   // Projects data
   const projects = [
+    {
+      title: 'PIGGY',
+      images: [piggy, piggyDetail],
+      description: "PIGGY (Planificador Inteligente de Gastos Y Ganancias) is a smart personal finance planner designed to help users efficiently manage their incomes and expenses in a structured and intuitive way. Built with Flutter, the application follows solid UX/UI design patterns to provide a smooth and user-friendly experience, using BLoC as the state management solution and SQLite as the local database for reliable data persistence. Piggy supports two different currencies and continuously fetches up-to-date U.S. dollar exchange rates, a key feature tailored specifically for Venezuelan users, considering the country’s economic context and currency fluctuations. By organizing financial movements into clear concepts and categories, Piggy offers meaningful insights that help users make better-informed financial decisions. The application is currently in development and will soon be available on the Google Play Store.",
+    },
+    {
+      title: 'PagoDirecto',
+      images: [pagoDirecto, pagoDirectoDetail],
+      description: "I have contributed as a Flutter frontend developer on the ongoing updates for PagoDirecto, a widely used Venezuelan mobile app currently available on the Google Play Store. In this role, I have built scalable new modules to expand the app’s functionality and implemented precise UX/UI designs to ensure an engaging user experience. My work involves integrating and managing MongoDB-sourced data provided by the backend, utilizing both BLoC and Provider for effective state management. Working on such a large and complex project has strengthened my ability to deliver high-quality code and maintain performance and consistency across evolving features, all as part of a collaborative development team.",
+    },
+    {
+      title: 'EnlanadosApp-Mobile',
+      images: [enlanadosMobileOrders, enlanadosMobileStatistics],
+      description: "EnlanadosApp-Mobile is an Android Mobile version of the preious project developed using Dart, Flutter and SQLite. It still manage bussiness logic related to keep track of orders, products, stock and statistics enhanced with new features that allows the user to have a more interactive UX/UI experience within the app and its usage. In addition to these changes this new version also brings new order and inventory structures wich let the user to add more than one product per order, personalized notifications and dynamic updates of the different parts of it.",
+    },
+    {
+      title: 'EnlanadosApp-Web',
+      images: [enlanadosOrders, enlanadosStatistics],
+      description: "EnlanadosApp-Web is a Flask-based application designed to streamline the management of orders, inventory, and organizational tasks for Enlanados, a small e-commerce platform specializing in crochet figures and related products. The app enhances operational efficiency by enabling users to create and track orders, manage wool inventory, and maintain an organized order history. In addition to these core functionalities, EnlanadosApp integrates data analysis tools to support informed decision-making, allowing the business to better understand trends, customer behavior, and inventory needs. The app also automates several previously manual processes, reducing time spent on repetitive tasks and improving overall efficiency. Built with the specific needs and requirements of the platform's owners in mind, the system was designed to provide a seamless, user-friendly experience that enhances both daily operations and long-term business growth.",
+    },
     {
       title: 'Sentinel Hawk',
       images: [sentinelIndex, sentinelCar],
@@ -31,16 +55,6 @@ function Projects() {
       title: 'LimeSurvey Data Manager',
       images: [limeApp, limeStatistics],
       description: "This project is a  simple python desktop-application which helps to manage the data provided by the responses of LimeSurveys along with the mobile application OfflineSurveysApp using Pandas module, in order to make them presentable and readable for common users trought out preformat .csv files and a more complete .html files wich includes dynamic tables of the responses, data analysis, charts and preview of images and locations if needed.",
-    },
-    {
-      title: 'EnlanadosApp-Web',
-      images: [enlanadosOrders, enlanadosStatistics],
-      description: "EnlanadosApp-Web is a Flask-based application designed to streamline the management of orders, inventory, and organizational tasks for Enlanados, a small e-commerce platform specializing in crochet figures and related products. The app enhances operational efficiency by enabling users to create and track orders, manage wool inventory, and maintain an organized order history. In addition to these core functionalities, EnlanadosApp integrates data analysis tools to support informed decision-making, allowing the business to better understand trends, customer behavior, and inventory needs. The app also automates several previously manual processes, reducing time spent on repetitive tasks and improving overall efficiency. Built with the specific needs and requirements of the platform's owners in mind, the system was designed to provide a seamless, user-friendly experience that enhances both daily operations and long-term business growth.",
-    },
-    {
-      title: 'EnlanadosApp-Mobile',
-      images: [enlanadosMobileOrders, enlanadosMobileStatistics],
-      description: "EnlanadosApp-Mobile is an Android Mobile version of the preious project developed using Dart, Flutter and SQLite. It still manage bussiness logic related to keep track of orders, products, stock and statistics enhanced with new features that allows the user to have a more interactive UX/UI experience within the app and its usage. In addition to these changes this new version also brings new order and inventory structures wich let the user to add more than one product per order, personalized notifications and dynamic updates of the different parts of it.",
     },
   ];
 

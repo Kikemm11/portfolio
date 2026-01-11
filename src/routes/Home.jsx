@@ -28,7 +28,7 @@ function Home() {
           <h2 className="text-5xl font-poppins mb-4 text-white">About Me</h2>
           <div className="bg-white/80 hover:bg-white/90 p-4 rounded-xl shadow-md w-full max-w-6xl flex flex-col transition-opacity duration-300">
             <p className="text-lg text-gray-700">
-              I'm a Backend-Oriented Software Developer with over 4 years of experience, currently finishing a Systems Engineering degree in the University of Los Andes, Mérida-Venezuela. 
+              I'm a Backend-Oriented Software Developer with over 5 years of experience, also working in frontend mobile development, currently finishing a Systems Engineering degree in the University of Los Andes, Mérida-Venezuela. 
               I have worked on multiple projects, taking on different roles that have allowed me to apply and refine my technical skills and process modeling 
               expertise in a comprehensive manner. My academic background and professional experience have equipped me to take complex challenges and deliver 
               efficient solutions using diverse technologies.
