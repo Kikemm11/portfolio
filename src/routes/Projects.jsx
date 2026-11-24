@@ -15,6 +15,8 @@ import piggy from '../assets/piggy.png';
 import piggyDetail from '../assets/piggy-detail.png';
 import pagoDirecto from '../assets/pago-directo.png';
 import pagoDirectoDetail from '../assets/pago-directo-detail.png';
+import clippyBanner from '../assets/clippy_banner.jpeg';
+import clippyHome from '../assets/clippy_home.jpg';
 
 
 
@@ -30,6 +32,11 @@ function Projects() {
       title: 'PagoDirecto',
       images: [pagoDirecto, pagoDirectoDetail],
       description: "I have contributed as a Flutter frontend developer on the ongoing updates for PagoDirecto, a widely used Venezuelan mobile app currently available on the Google Play Store. In this role, I have built scalable new modules to expand the app’s functionality and implemented precise UX/UI designs to ensure an engaging user experience. My work involves integrating and managing MongoDB-sourced data provided by the backend, utilizing both BLoC and Provider for effective state management. Working on such a large and complex project has strengthened my ability to deliver high-quality code and maintain performance and consistency across evolving features, all as part of a collaborative development team.",
+    },
+    {
+      title: 'Clippy',
+      images: [clippyHome, clippyBanner],
+      description: "Clippy is a smart cross-device clipboard and file-sharing app designed to help users move text, images, and documents between devices quickly, safely, and effortlessly. Built with React Native, the app uses clean, intuitive design to make everyday sharing feel natural, connecting devices directly over the local network using TCP and UDP so data travels straight from one device to another without passing through outside servers. Clippy also connects with Firebase to handle user accounts and sign-ins smoothly, and includes In-App Purchases (IAPs) so users can unlock larger transfers and extra perks when they need them. By keeping local sharing simple and account management reliable, Clippy helps people stay in sync across their devices without friction.",
     },
     {
       title: 'EnlanadosApp-Mobile',
