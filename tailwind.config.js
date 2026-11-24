@@ -1,40 +1,58 @@
-module.exports = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+const color = (name) => `rgb(var(--color-${name}) / <alpha-value>)`;
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: [
+          'Poppins',
+          'ui-sans-serif',
+          'system-ui',
+          'Avenir',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+        ],
       },
-      backgroundImage: {
-        'custom-pattern': "url('/background.jpg')",
+      colors: {
+        canvas: color('canvas'),
+        surface: {
+          DEFAULT: color('surface'),
+          hover: color('surface-hover'),
+        },
+        line: {
+          DEFAULT: color('border'),
+          strong: color('border-strong'),
+        },
+        content: {
+          primary: color('content-primary'),
+          secondary: color('content-secondary'),
+          muted: color('content-muted'),
+        },
+        accent: {
+          DEFAULT: color('accent'),
+          strong: color('accent-strong'),
+          hover: color('accent-hover'),
+          soft: color('accent-soft'),
+        },
+      },
+      maxWidth: {
+        content: '72rem',
       },
       animation: {
-        'logo-spin': 'logo-spin 20s linear infinite',
-        'slide-out-left': 'slideOutLeft 0.5s forwards',
-        'slide-out-right': 'slideOutRight 0.5s forwards',
-        'slide-in-left': 'slideInLeft 0.5s forwards',
-        'slide-in-right': 'slideInRight 0.5s forwards',
+        'fade-in-up': 'fadeInUp 0.6s ease-out both',
+        'cursor-blink': 'cursorBlink 1s step-end infinite',
       },
       keyframes: {
-        'logo-spin': {
-          from: { transform: 'rotate(0deg)' },
-          to: { transform: 'rotate(360deg)' },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        'slide-out-left': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
-        'slide-out-right': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(100%)' },
-        },
-        'slide-in-left': {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0)' },
-        },
-        'slide-in-right': {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(0)' },
+        cursorBlink: {
+          '0%, 50%': { opacity: '1' },
+          '51%, 100%': { opacity: '0' },
         },
       },
     },

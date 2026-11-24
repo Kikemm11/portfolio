@@ -1,18 +1,39 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './routes/Home';
-import Skills from './routes/Skills';
-import Projects from './routes/Projects';
-import Contact from './routes/Contact';
+import { useEffect, useState } from 'react';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import HomePage from './routes/HomePage';
+import ProjectDetail from './routes/ProjectDetail';
+import { themes } from './constants/theme';
+import LanguageProvider from './context/LanguageProvider';
 
 export default function App() {
+  const [theme, setTheme] = useState(
+    () => document.documentElement.dataset.theme || 'light',
+  );
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', themes[theme].canvas);
+  }, [theme]);
+
   return (
-    <Router basename="/portfolio"> {/* Use the base path here */}
-      <Routes>
-        <Route path="/" element={<Home />} /> {/* Make Home relative to "/portfolio" */}
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <LanguageProvider>
+      <HashRouter>
+        <Navbar
+          theme={theme}
+          onToggleTheme={() =>
+            setTheme((current) => (current === 'light' ? 'dark' : 'light'))
+          }
+        />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects/:projectId" element={<ProjectDetail />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </HashRouter>
+    </LanguageProvider>
   );
 }
