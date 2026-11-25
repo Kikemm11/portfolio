@@ -17,7 +17,7 @@ export const translations = {
     hero: {
       role: 'Systems Engineer · Software Developer',
       pitch:
-        'I build robust backend and mobile apps solutions that turn complex requirements into software that stays simple to use.',
+        'I build robust backend and mobile solutions that turn complex requirements into software that stays simple to use.',
       viewProjects: 'View projects',
       getInTouch: 'Get in touch',
     },
@@ -26,9 +26,9 @@ export const translations = {
       title: 'A bit about me',
       description: 'Systems Engineer focused on backend and mobile development.',
       p1:
-        "I'm a Systems Engineer specialized in backend and mobile development, with over five years turning complex requirements into reliable, cross-platform solutions. I've worked across development, databases and process modeling, from Flutter apps on Google Play to ERP systems for healthcare providers.",
+        "I'm a Systems Engineer specialized in backend and mobile development, with over five years of experience turning complex requirements into reliable, cross-platform solutions. My work spans development, databases and process modeling, from Flutter apps on Google Play to ERP systems. I've also managed small developer teams and taken on DevOps and maintainer roles across a wide range of projects.",
       p2:
-        'I enjoy the craft of building: clean architecture, thoughtful UX and choosing the right technology for each problem rather than the trendiest one.',
+        'I enjoy the craft of building clean architecture, thoughtful UX and choosing the right technology for each problem.',
       experience: 'Years of experience',
       shipped: 'Projects shipped',
       apps: 'Apps on Google Play',
@@ -90,7 +90,7 @@ export const translations = {
     hero: {
       role: 'Ingeniero de Sistemas · Desarrollador de Software',
       pitch:
-        'Construyo soluciones robustas de backend y apps móvil que convierten requisitos complejos en software fácil de usar.',
+        'Construyo soluciones robustas de backend y móvil que convierten requisitos complejos en software fácil de usar.',
       viewProjects: 'Ver proyectos',
       getInTouch: 'Contactar',
     },
@@ -99,9 +99,9 @@ export const translations = {
       title: 'Un poco sobre mí',
       description: 'Ingeniero de Sistemas enfocado en desarrollo backend y móvil.',
       p1:
-        'Soy Ingeniero de Sistemas especializado en desarrollo backend y móvil, con más de cinco años transformando requisitos complejos en soluciones confiables y multiplataforma. He trabajado en desarrollo, bases de datos y modelado de procesos, desde aplicaciones Flutter en Google Play hasta sistemas ERP para proveedores de salud.',
+        'Soy Ingeniero de Sistemas especializado en desarrollo backend y móvil, con más de cinco años de experiencia transformando requisitos complejos en soluciones confiables y multiplataforma. Mi trabajo abarca desarrollo, bases de datos y modelado de procesos, desde aplicaciones Flutter en Google Play hasta sistemas ERP. También he dirigido equipos pequeños de desarrollo y asumido roles de DevOps y mantenimiento en una amplia variedad de proyectos.',
       p2:
-        'Disfruto el oficio de construir: arquitectura limpia, UX cuidada y elegir la tecnología adecuada para cada problema en lugar de la más de moda.',
+        'Disfruto el oficio de construir arquitectura limpia, UX cuidada y elegir la tecnología adecuada para cada problema.',
       experience: 'Años de experiencia',
       shipped: 'Proyectos entregados',
       apps: 'Apps en Google Play',

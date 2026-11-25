@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const NAME = 'Iván Maldonado';
 const TYPE_DELAY = 90;
-const HOLD_DELAY = 1000;
+const HOLD_DELAY = 2500;
 const ERASE_DELAY = 40;
 const RESTART_DELAY = 350;
 

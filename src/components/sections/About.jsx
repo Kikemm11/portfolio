@@ -1,4 +1,4 @@
-import meImage from '../../assets/me.jpg';
+import meImage from '../../assets/me.webp';
 import { useLanguage } from '../../context/useLanguage';
 import Reveal from '../Reveal';
 import Section from '../Section';
@@ -19,12 +19,12 @@ export default function About() {
       title={t('about.title')}
       description={t('about.description')}
     >
-      <div className="grid items-center gap-8 lg:grid-cols-[280px_1fr] lg:gap-12">
+      <div className="grid items-center gap-8 lg:grid-cols-[320px_1fr] lg:gap-12">
         <Reveal>
           <img
             src={meImage}
             alt="Iván Maldonado"
-            className="h-auto w-full max-w-[280px] rounded-xl border border-line object-cover"
+            className="h-auto w-full max-w-[320px] rounded-xl border border-line object-cover aspect-[3/4]"
           />
         </Reveal>
 

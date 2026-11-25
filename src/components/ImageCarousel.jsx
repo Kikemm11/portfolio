@@ -16,7 +16,7 @@ export default function ImageCarousel({ images, className = '', imageClassName =
         src={images[index].src}
         alt={images[index].alt}
         loading="lazy"
-        className={`w-full object-cover ${imageClassName}`}
+        className={`w-full object-fill ${imageClassName}`}
       />
 
       {count > 1 && (

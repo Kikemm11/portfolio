@@ -18,7 +18,7 @@ function FeaturedCard({ project }) {
   const { loc } = useLanguage();
 
   return (
-    <article className="overflow-hidden rounded-2xl border border-line bg-surface lg:grid lg:grid-cols-2">
+    <article className="overflow-hidden rounded-2xl border border-line bg-surface lg:grid lg:grid-cols-[1.4fr_1fr]">
       <div className="p-3 sm:p-4">
         <ImageCarousel
           images={project.images}
@@ -89,13 +89,15 @@ function CompactCard({ project }) {
           ))}
         </div>
 
-        <Link
-          to={`/projects/${project.id}`}
-          className="mt-4 flex items-center gap-2 border-t border-line pt-3 text-left text-sm font-medium text-accent transition-colors hover:text-accent-hover"
-        >
-          {t('projects.viewDetails')}
-          <FaArrowRight className="text-xs" />
-        </Link>
+        <div className="mt-auto pt-4">
+          <Link
+            to={`/projects/${project.id}`}
+            className="flex items-center gap-2 border-t border-line pt-3 text-left text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+          >
+            {t('projects.viewDetails')}
+            <FaArrowRight className="text-xs" />
+          </Link>
+        </div>
       </div>
     </article>
   );
@@ -129,7 +131,7 @@ export default function Projects() {
           </span>
         </Reveal>
 
-        <div className="grid items-start gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {otherProjects.map((project, index) => (
             <Reveal key={project.id} delay={index * 60} className="h-full">
               <CompactCard project={project} />

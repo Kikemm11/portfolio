@@ -1,19 +1,21 @@
-import piggy from '../assets/piggy.png';
-import piggyDetail from '../assets/piggy-detail.png';
-import pagoDirecto from '../assets/pago-directo.png';
-import pagoDirectoDetail from '../assets/pago-directo-detail.png';
-import clippyHome from '../assets/clippy_home.jpg';
-import clippyBanner from '../assets/clippy_banner.jpeg';
-import enlanadosMobileOrders from '../assets/enlanados-mobile-orders.png';
-import enlanadosMobileStatistics from '../assets/enlanados-mobile-statistics.png';
-import enlanadosOrders from '../assets/enlanados-orders.png';
-import enlanadosStatistics from '../assets/enlanados-statistics.png';
-import sentinelIndex from '../assets/sentinel-index.jpg';
-import sentinelCar from '../assets/sentinel-car.jpg';
-import gnuhealthClient from '../assets/gnuhealth-client.jpg';
-import gnuhealthParty from '../assets/gnuhealth-party.jpg';
-import limeApp from '../assets/lime-app.jpg';
-import limeStatistics from '../assets/lime-statistics.jpg';
+import piggy from '../assets/piggy/image_1.webp';
+import piggyDetail from '../assets/piggy/image_2.webp';
+import piggyPlayStore from '../assets/piggy/image_3.webp';
+import pagoDirecto from '../assets/pago-directo/image_1.webp';
+import pagoDirectoDetail from '../assets/pago-directo/image_2.webp';
+import clippyHome from '../assets/clippy/image_1.webp';
+import clippyBanner from '../assets/clippy/image_2.webp';
+import clippyPlayStore from '../assets/clippy/image_3.webp';
+import enlanadosMobileOrders from '../assets/enlanados-mobile/image_1.webp';
+import enlanadosMobileStatistics from '../assets/enlanados-mobile/image_2.webp';
+import enlanadosOrders from '../assets/enlanados-web/image_1.webp';
+import enlanadosStatistics from '../assets/enlanados-web/image_2.webp';
+import sentinelIndex from '../assets/sentinel-hawk/image_1.webp';
+import sentinelCar from '../assets/sentinel-hawk/image_2.webp';
+import gnuhealthClient from '../assets/gnuhealth/image_1.webp';
+import gnuhealthParty from '../assets/gnuhealth/image_2.webp';
+import limeApp from '../assets/lime-survey/image_1.webp';
+import limeStatistics from '../assets/lime-survey/image_2.webp';
 
 /**
  * All project content lives here so the sections stay presentational.
@@ -50,6 +52,8 @@ export const projects = [
     images: [
       { src: piggy, alt: 'PIGGY app home screen' },
       { src: piggyDetail, alt: 'PIGGY app expense detail screen' },
+      { src: piggyPlayStore, alt: 'PIGGY app from PlayStore' },
+
     ],
   },
   {
@@ -59,8 +63,8 @@ export const projects = [
     featured: true,
     tags: ['Flutter', 'BLoC', 'Provider', 'MongoDB'],
     summary: {
-      en: 'Venezuelan payments app where I build and maintain scalable modules as part of a distributed product team.',
-      es: 'Aplicación venezolana de pagos en la que desarrollo y mantengo módulos escalables como parte de un equipo de producto distribuido.',
+      en: 'Venezuelan payments app where I build and maintained scalable modules as part of a distributed product team.',
+      es: 'Aplicación venezolana de pagos en la que desarrollé y mantuve módulos escalables como parte de un equipo de producto distribuido.',
     },
     details: {
       en: 'Implemented UX/UI designs and integrated MongoDB-backed data served by the backend, using BLoC and Provider for state management. Ongoing work on a large production codebase with a focus on performance and consistency across evolving features. Published on Google Play.',
@@ -112,6 +116,7 @@ export const projects = [
     images: [
       { src: clippyHome, alt: 'Clippy app home screen' },
       { src: clippyBanner, alt: 'Clippy cross-device sharing overview' },
+      { src: clippyPlayStore, alt: 'Clippy PlayStore' },
     ],
   },
   {
@@ -125,8 +130,8 @@ export const projects = [
       es: 'Aplicación Android para gestionar pedidos, productos, inventario y estadísticas del negocio.',
     },
     details: {
-      en: 'A Flutter and Dart companion to the web system, backed by SQLite. Added multi-product orders, flexible inventory structures, personalized notifications and dynamic updates for a more interactive experience.',
-      es: 'Compañero del sistema web desarrollado con Flutter y Dart, respaldado por SQLite. Añadí pedidos con múltiples productos, estructuras de inventario flexibles, notificaciones personalizadas y actualizaciones dinámicas para una experiencia más interactiva.',
+      en: 'A Flutter and Dart mobile app, backed by SQLite. Added multi-product orders, flexible inventory structures, personalized notifications and dynamic updates for a more interactive experience.',
+      es: 'Una aplicación móvil desarrollada con Flutter y Dart, respaldada por SQLite. Añadí pedidos con múltiples productos, estructuras de inventario flexibles, notificaciones personalizadas y actualizaciones dinámicas para una experiencia más interactiva.',
     },
     highlights: {
       en: [
