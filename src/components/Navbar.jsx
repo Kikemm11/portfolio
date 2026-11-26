@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaBars, FaMoon, FaSun, FaTimes } from 'react-icons/fa';
 import { useLanguage } from '../context/useLanguage';
+import { ANALYTICS_EVENTS, trackEvent } from '../utils/analytics';
 
 const links = [
   { id: 'about', key: 'nav.about' },
@@ -41,17 +42,37 @@ export default function Navbar({ theme, onToggleTheme }) {
     return () => observer.disconnect();
   }, [isHome]);
 
-  const goTo = (event, id) => {
+  const goTo = (event, link) => {
     event.preventDefault();
     setMenuOpen(false);
+    trackEvent(ANALYTICS_EVENTS.NAVBAR_CLICK, {
+      nav_item: link.id,
+      nav_label: t(link.key),
+    });
 
     if (isHome) {
       document
-        .getElementById(id)
+        .getElementById(link.id)
         ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-      navigate('/', { state: { scrollTo: id } });
+      navigate('/', { state: { scrollTo: link.id } });
     }
+  };
+
+  const handleLanguageToggle = () => {
+    trackEvent(ANALYTICS_EVENTS.LANGUAGE_TOGGLE, {
+      language_from: language,
+      language_to: language === 'en' ? 'es' : 'en',
+    });
+    toggleLanguage();
+  };
+
+  const handleThemeToggle = () => {
+    trackEvent(ANALYTICS_EVENTS.NAVBAR_CLICK, {
+      nav_item: 'theme',
+      nav_label: 'Theme',
+    });
+    onToggleTheme();
   };
 
   const linkClass = (id) =>
@@ -72,7 +93,7 @@ export default function Navbar({ theme, onToggleTheme }) {
         <div className="flex items-center gap-2">
           <button
             type="button"
-            onClick={toggleLanguage}
+            onClick={handleLanguageToggle}
             aria-label={nextLanguage}
             title={nextLanguage}
             className="rounded-md border border-line px-2.5 py-2 text-xs font-semibold text-content-secondary transition-colors hover:border-accent hover:text-accent"
@@ -81,7 +102,7 @@ export default function Navbar({ theme, onToggleTheme }) {
           </button>
           <button
             type="button"
-            onClick={onToggleTheme}
+            onClick={handleThemeToggle}
             aria-label={isDark ? t('nav.lightTheme') : t('nav.darkTheme')}
             title={isDark ? t('nav.lightTheme') : t('nav.darkTheme')}
             className="rounded-md border border-line p-2 text-content-secondary transition-colors hover:border-accent hover:text-accent"
@@ -95,7 +116,7 @@ export default function Navbar({ theme, onToggleTheme }) {
             <a
               key={link.id}
               href={`#${link.id}`}
-              onClick={(event) => goTo(event, link.id)}
+              onClick={(event) => goTo(event, link)}
               className={linkClass(link.id)}
               aria-current={active === link.id ? 'location' : undefined}
             >
@@ -122,7 +143,7 @@ export default function Navbar({ theme, onToggleTheme }) {
               <a
                 key={link.id}
                 href={`#${link.id}`}
-                onClick={(event) => goTo(event, link.id)}
+                onClick={(event) => goTo(event, link)}
                 className={linkClass(link.id)}
                 aria-current={active === link.id ? 'location' : undefined}
               >

@@ -24,6 +24,9 @@ function FeaturedCard({ project }) {
           images={project.images}
           className="rounded-xl"
           imageClassName="aspect-[4/3]"
+          projectId={project.id}
+          projectTitle={project.title}
+          context="featured"
         />
       </div>
 
@@ -70,6 +73,9 @@ function CompactCard({ project }) {
         images={project.images}
         className="rounded-lg"
         imageClassName="aspect-[16/10]"
+        projectId={project.id}
+        projectTitle={project.title}
+        context="grid"
       />
 
       <div className="flex flex-1 flex-col px-2 pb-2 pt-4">

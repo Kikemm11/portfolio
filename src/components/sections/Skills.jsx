@@ -12,10 +12,11 @@ export default function Skills() {
       eyebrow={t('skills.eyebrow')}
       title={t('skills.title')}
       description={t('skills.description')}
+      revealDirection="right"
     >
       <div className="grid gap-8 md:grid-cols-2 lg:gap-x-12">
         {skillGroups.map((group, index) => (
-          <Reveal key={group.name.en} delay={index * 80}>
+          <Reveal key={group.name.en} delay={index * 80} direction="right">
             <h3 className="border-b border-line pb-3 text-sm font-semibold uppercase tracking-[0.16em] text-content-primary">
               {loc(group.name)}
             </h3>

@@ -1,7 +1,14 @@
 import Reveal from './Reveal';
 
 /** Shared wrapper that keeps spacing and section headings consistent. */
-export default function Section({ id, eyebrow, title, description, children }) {
+export default function Section({
+  id,
+  eyebrow,
+  title,
+  description,
+  revealDirection = 'up',
+  children,
+}) {
   return (
     <section
       id={id}
@@ -9,7 +16,7 @@ export default function Section({ id, eyebrow, title, description, children }) {
     >
       <div className="mx-auto max-w-content">
         {(eyebrow || title) && (
-          <Reveal className="mb-8 max-w-2xl">
+          <Reveal className="mb-8 max-w-2xl" direction={revealDirection}>
             {eyebrow && (
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                 {eyebrow}
@@ -27,7 +34,9 @@ export default function Section({ id, eyebrow, title, description, children }) {
             )}
           </Reveal>
         )}
-        <Reveal delay={80}>{children}</Reveal>
+        <Reveal delay={80} direction={revealDirection}>
+          {children}
+        </Reveal>
       </div>
     </section>
   );

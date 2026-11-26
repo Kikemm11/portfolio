@@ -1,14 +1,40 @@
 import { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useLanguage } from '../context/useLanguage';
+import { ANALYTICS_EVENTS, trackEvent } from '../utils/analytics';
 
 /** Shows one image at a time with minimal controls and position dots. */
-export default function ImageCarousel({ images, className = '', imageClassName = '' }) {
+export default function ImageCarousel({
+  images,
+  className = '',
+  imageClassName = '',
+  projectId = 'unknown',
+  projectTitle = 'unknown',
+  context = 'featured',
+}) {
   const [index, setIndex] = useState(0);
   const { t } = useLanguage();
   const count = images.length;
 
-  const go = (step) => setIndex((current) => (current + step + count) % count);
+  const track = (interaction, imageIndex) =>
+    trackEvent(ANALYTICS_EVENTS.PROJECT_IMAGE_NAVIGATION, {
+      project_id: projectId,
+      project_title: projectTitle,
+      context,
+      interaction,
+      image_index: imageIndex + 1,
+    });
+
+  const stepBy = (step) => {
+    const next = (index + step + count) % count;
+    setIndex(next);
+    track(step === -1 ? 'previous' : 'next', next);
+  };
+
+  const show = (dotIndex) => {
+    setIndex(dotIndex);
+    track('dot', dotIndex);
+  };
 
   return (
     <div className={`relative overflow-hidden bg-canvas ${className}`}>
@@ -23,7 +49,7 @@ export default function ImageCarousel({ images, className = '', imageClassName =
         <>
           <button
             type="button"
-            onClick={() => go(-1)}
+            onClick={() => stepBy(-1)}
             aria-label={t('image.previous')}
             className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-line bg-canvas/85 p-2 text-content-secondary transition-colors hover:text-accent"
           >
@@ -31,7 +57,7 @@ export default function ImageCarousel({ images, className = '', imageClassName =
           </button>
           <button
             type="button"
-            onClick={() => go(1)}
+            onClick={() => stepBy(1)}
             aria-label={t('image.next')}
             className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-line bg-canvas/85 p-2 text-content-secondary transition-colors hover:text-accent"
           >
@@ -42,7 +68,7 @@ export default function ImageCarousel({ images, className = '', imageClassName =
               <button
                 key={image.src}
                 type="button"
-                onClick={() => setIndex(dotIndex)}
+                onClick={() => show(dotIndex)}
                 aria-label={t('image.show', { number: dotIndex + 1 })}
                 aria-current={dotIndex === index ? 'true' : undefined}
                 className={`h-1.5 rounded-full transition-all ${

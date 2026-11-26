@@ -56,6 +56,9 @@ export default function ProjectDetail() {
           images={project.images}
           className="rounded-xl"
           imageClassName="aspect-[16/9]"
+          projectId={project.id}
+          projectTitle={project.title}
+          context="detail"
         />
       </div>
 
