@@ -38,9 +38,6 @@ export default {
           soft: color('accent-soft'),
         },
       },
-      maxWidth: {
-        content: '72rem',
-      },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out both',
         'cursor-blink': 'cursorBlink 1s step-end infinite',

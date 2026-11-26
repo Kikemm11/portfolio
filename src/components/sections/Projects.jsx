@@ -137,7 +137,7 @@ export default function Projects() {
           </span>
         </Reveal>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {otherProjects.map((project, index) => (
             <Reveal key={project.id} delay={index * 60} className="h-full">
               <CompactCard project={project} />

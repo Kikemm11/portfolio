@@ -30,7 +30,7 @@ export default function About() {
 
         <Reveal delay={100}>
           <div>
-            <div className="max-w-2xl space-y-5 text-base leading-relaxed text-content-secondary">
+            <div className="max-w-5xl space-y-5 text-base leading-relaxed text-content-secondary">
               <p>{t('about.p1')}</p>
               <p>{t('about.p2')}</p>
             </div>

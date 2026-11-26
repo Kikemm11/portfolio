@@ -28,7 +28,7 @@ export default function Contact() {
         title={t('contact.title')}
         description={t('contact.description')}
       >
-        <div className="max-w-2xl divide-y divide-line border-y border-line">
+        <div className="max-w-4xl divide-y divide-line border-y border-line">
           {items.map(({ key, Icon }, index) => {
             const external = key !== 'email';
             return (
@@ -55,7 +55,7 @@ export default function Contact() {
       </Section>
 
       <footer className="border-t border-line">
-        <div className="mx-auto flex max-w-content flex-col items-center justify-between gap-2 px-6 py-8 text-xs text-content-muted sm:flex-row lg:px-8">
+        <div className="flex w-full flex-col items-center justify-between gap-2 px-6 py-8 text-xs text-content-muted sm:flex-row sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <span>{t('contact.copyright', { year: new Date().getFullYear() })}</span>
           <span>{t('contact.role')}</span>
         </div>

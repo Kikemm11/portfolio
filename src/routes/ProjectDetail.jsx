@@ -24,7 +24,7 @@ export default function ProjectDetail() {
   const backLink = { to: '/', state: { scrollTo: 'projects' } };
 
   return (
-    <main className="mx-auto max-w-content animate-fade-in-up px-6 py-12 lg:px-8">
+    <main className="w-full animate-fade-in-up px-6 py-12 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
       <Link
         {...backLink}
         className="inline-flex items-center gap-2 text-sm text-content-muted transition-colors hover:text-accent"
@@ -32,7 +32,7 @@ export default function ProjectDetail() {
         <FaArrowLeft /> {t('detail.back')}
       </Link>
 
-      <div className="mt-8 max-w-3xl">
+      <div className="mt-8 max-w-5xl">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
           {loc(project.category)}
         </p>

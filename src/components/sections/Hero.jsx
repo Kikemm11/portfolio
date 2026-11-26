@@ -25,8 +25,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-canvas via-canvas/30 to-canvas/10" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-content flex-col justify-center px-6 py-14 lg:px-8">
-        <div className="max-w-3xl animate-fade-in-up">
+      <div className="relative z-10 flex min-h-[70vh] w-full flex-col justify-center px-6 py-14 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
+        <div className="max-w-6xl animate-fade-in-up">
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-content-secondary">
             
             {t('hero.role')}
@@ -34,7 +34,7 @@ export default function Hero() {
 
           <TypewriterName />
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-content-secondary sm:text-xl">
+          <p className="mt-6 max-w-4xl text-lg leading-relaxed text-content-secondary sm:text-xl">
             {t('hero.pitch')}
           </p>
 

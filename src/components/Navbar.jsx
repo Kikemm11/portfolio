@@ -88,7 +88,7 @@ export default function Navbar({ theme, onToggleTheme }) {
     <header className="sticky top-0 z-50 border-b border-line/70 bg-canvas/85 backdrop-blur-md">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex max-w-content items-center justify-between px-6 py-4 lg:px-8"
+        className="flex w-full items-center justify-between px-6 py-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24"
       >
         <div className="flex items-center gap-2">
           <button

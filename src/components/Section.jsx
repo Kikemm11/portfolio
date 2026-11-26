@@ -12,11 +12,11 @@ export default function Section({
   return (
     <section
       id={id}
-      className="border-t border-line/60 px-6 py-12 sm:py-16 lg:px-8 lg:py-20"
+      className="border-t border-line/60 px-6 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20 xl:px-16 2xl:px-24"
     >
-      <div className="mx-auto max-w-content">
+      <div className="w-full">
         {(eyebrow || title) && (
-          <Reveal className="mb-8 max-w-2xl" direction={revealDirection}>
+          <Reveal className="mb-8 max-w-4xl" direction={revealDirection}>
             {eyebrow && (
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                 {eyebrow}
